@@ -1,9 +1,12 @@
 from machine import Pin, PWM
 import time
 
-# --- ตั้งค่ามอเตอร์ (Motor Setup) ---
+# --- ตั้งค่าการควบคุมมอเตอร์ (Motor Setup) ---
+# มอเตอร์ 1 (ซ้าย) ต่อกับขา 13 และ 14
 M1_B = PWM(Pin(13))
 M1_A = PWM(Pin(14))
+
+# มอเตอร์ 2 (ขวา) ต่อกับขา 16 และ 17 
 M2_B = PWM(Pin(16))
 M2_A = PWM(Pin(17))
 
