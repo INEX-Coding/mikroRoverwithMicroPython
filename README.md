@@ -25,4 +25,4 @@
 5. หากต้องการให้หุ่นยนต์ทำงานแบบ Standalone ให้บันทึกไฟล์ลงในบอร์ดโดยตั้งชื่อว่า `main.py`
 
 ---
-[cite_start]**อ้างอิงคู่มือ:** [mikroRover MicroPython Activity Book](https://drive.google.com/file/d/12be7V-ngCEMdKZ6IKuqK3KCl4ZbCCpn5/view)
+**อ้างอิงคู่มือ:** [mikroRover MicroPython Activity Book](https://drive.google.com/file/d/12be7V-ngCEMdKZ6IKuqK3KCl4ZbCCpn5/view)
