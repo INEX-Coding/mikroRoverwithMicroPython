@@ -13,7 +13,8 @@ def set_servo(servo, angle):
     servo.duty_ns(duty)
 BUTTONS = {
     0x0009: "L1",  0x0005: "L2",  
-    0x0801: "R1",  0x0401: "R2"   
+    0x0801: "R1",  0x0401: "R2"  
+}
 @rp2.asm_pio(in_shiftdir=rp2.PIO.SHIFT_LEFT, autopush=True, push_thresh=8)
 def uart_rx():
     wait(0, pin, 0); set(x, 7) [10]; label("b")
@@ -39,14 +40,14 @@ while True:
                 print(f"Pressed: {name}")
                 # --- [ส่วนที่ 1] ควบคุม Servo 1 (L1/L2) ---
                 if name == "L1":
-                    angle1 = angle1 + 5
+                    angle1 = angle1 + 1
                 elif name == "L2":
-                    angle1 = angle1 - 5
+                    angle1 = angle1 - 1
                 # --- [ส่วนที่ 2] ควบคุม Servo 2 (R1/R2) ---
                 elif name == "R1":
-                    angle2 = angle2 + 5  # เพิ่มมุม Servo 2
+                    angle2 = angle2 + 1  # เพิ่มมุม Servo 2
                 elif name == "R2":
-                    angle2 = angle2 - 5  # ลดมุม Servo 2
+                    angle2 = angle2 - 1  # ลดมุม Servo 2
                 # --- ระบบป้องกัน (Clamping) ---
                 # ต้องเช็คแยกกัน เพราะมุมของใครของมัน
                 if angle1 > 180: angle1 = 180
